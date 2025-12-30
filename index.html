@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy New Year 2026</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+
+      /* BACKGROUND IMAGE */
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+        url("Gemini_Generated_Image_f67r1ff67r1ff67r.png") center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      z-index: 2;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      font-weight: 300;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    /* Shooting stars layer */
+    .shooting-stars {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 140px;
+      height: 2px;
+
+      /* tail on LEFT, bright head on RIGHT */
+      background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0),
+        rgba(255,255,255,1)
+      );
+
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.9));
+      opacity: 0.9;
+      transform: rotate(45deg);
+      animation: shoot linear infinite;
+    }
+
+    @keyframes shoot {
+      from {
+        transform: translate(-200px, -200px) rotate(45deg);
+        opacity: 1;
+      }
+      to {
+        transform: translate(120vw, 120vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Shooting stars -->
+  <div class="shooting-stars">
+    <div class="star" style="top:6%; left:6%; animation-duration:7s; animation-delay:0s;"></div>
+    <div class="star" style="top:14%; left:10%; animation-duration:9s; animation-delay:2s;"></div>
+    <div class="star" style="top:24%; left:4%; animation-duration:8s; animation-delay:4s;"></div>
+    <div class="star" style="top:34%; left:8%; animation-duration:10s; animation-delay:1s;"></div>
+    <div class="star" style="top:44%; left:2%; animation-duration:11s; animation-delay:3s;"></div>
+  </div>
+
+  <!-- Text Content -->
+  <div class="container">
+    <h1>Happy New Year 2026 ✨</h1>
+    <p>
+      Wishing you peace, good health,<br>
+      and many reasons to smile this year 🌙
+    </p>
+  </div>
+
+</body>
+</html>
